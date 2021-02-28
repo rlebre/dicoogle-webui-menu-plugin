@@ -30,6 +30,9 @@
   "devDependencies": {
     "babel-minify-webpack-plugin": "^0.3.1",
     "file-loader": "^3.0.1",
+    "husky": "=4",
+    "lint-staged": ">=10",
+    "prettier": "^2.2.1",
     "ts-loader": "^4.5.0",
     "typescript": "^2.9.2",
     "webpack": "^4.46.0",
@@ -39,8 +42,16 @@
   "dependencies": {
     "@types/react": "^15",
     "@types/react-dom": "^15",
+    "dicoogle-client": "^4.2.0",
     "react": "^15",
-    "react-dom": "^15",
-    "dicoogle-client": "^4.2.0"
+    "react-dom": "^15"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,scss,css,md}": "prettier --write"
   }
 }
