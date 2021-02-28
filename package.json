@@ -46,11 +46,6 @@
     "react": "^15",
     "react-dom": "^15"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{js,ts,jsx,tsx,scss,css,md}": "prettier --write"
   }
